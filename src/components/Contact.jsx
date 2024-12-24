@@ -31,18 +31,23 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+    // Replace these with your actual EmailJS details
+    const serviceId = "service_ahsd354"; // Your EmailJS Service ID
+    const templateId = "template_tg0vscl"; // Your EmailJS Template ID
+    const publicKey = "6GzAnT3Qtn4hzNFng"; // Your EmailJS Public Key
+
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        serviceId,
+        templateId,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Ashwani Yadav",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "22ashwaniyadav@gmail.com",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        publicKey
       )
       .then(
         () => {
@@ -65,9 +70,7 @@ const Contact = () => {
   };
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-    >
+    <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'

@@ -1,66 +1,77 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
-import { testimonials } from "../constants";
+import { certificates } from "../constants";
 
-const FeedbackCard = ({
-  index,
-  testimonial,
-  name,
-  designation,
-  company,
-  image,
-}) => (
-  <motion.div
-    variants={fadeIn("", "spring", index * 0.5, 0.75)}
-    className='bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full'
-  >
-    <p className='text-white font-black text-[48px]'>"</p>
+const AchievementCard = ({ index, image, title }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-    <div className='mt-1'>
-      <p className='text-white tracking-wider text-[18px]'>{testimonial}</p>
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
-      <div className='mt-7 flex justify-between items-center gap-1'>
-        <div className='flex-1 flex flex-col'>
-          <p className='text-white font-medium text-[16px]'>
-            <span className='blue-text-gradient'>@</span> {name}
-          </p>
-          <p className='mt-1 text-secondary text-[12px]'>
-            {designation} of {company}
-          </p>
+  return (
+    <>
+      <motion.div
+        variants={fadeIn("", "spring", index * 0.5, 0.75)}
+        className="bg-black-200 p-5 rounded-3xl xs:w-[320px] w-full cursor-pointer group"
+        onClick={openModal}
+      >
+        <div className="relative overflow-hidden rounded-md">
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-[200px] object-cover rounded-md transition-transform duration-300 ease-in-out group-hover:scale-105"
+          />
         </div>
+        <p className="mt-3 text-white font-medium text-[16px] text-center">
+          {title}
+        </p>
+      </motion.div>
 
-        <img
-          src={image}
-          alt={`feedback_by-${name}`}
-          className='w-10 h-10 rounded-full object-cover'
-        />
-      </div>
-    </div>
-  </motion.div>
-);
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
+          <div className="relative bg-white rounded-lg p-5 max-w-[90%] max-h-[90%]">
+            <button
+              className="absolute top-2 right-2 text-black text-[24px] font-bold"
+              onClick={closeModal}
+            >
+              ×
+            </button>
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+            />
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
 
-const Feedbacks = () => {
+const Achievements = () => {
   return (
     <div className={`mt-12 bg-black-100 rounded-[20px]`}>
       <div
         className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
       >
         <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>What others say</p>
-          <h2 className={styles.sectionHeadText}>Testimonials.</h2>
+          <p className={styles.sectionSubText}>What I've Accomplished</p>
+          <h2 className={styles.sectionHeadText}>Achievements.</h2>
         </motion.div>
       </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
-        {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
+      <div
+        className={`-mt-20 pb-14 ${styles.paddingX} flex overflow-x-auto gap-7`}
+      >
+        {certificates.map((certificate, index) => (
+          <AchievementCard key={index} index={index} {...certificate} />
         ))}
       </div>
     </div>
   );
 };
 
-export default SectionWrapper(Feedbacks, "");
+export default SectionWrapper(Achievements, "");

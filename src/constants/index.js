@@ -16,13 +16,19 @@ import {
   figma,
   docker,
   meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
+  skillop,
+  dp,
+  eythor,
+  solidity,
+  metamask,
+  ethereum,
   threejs,
+  sk,
+  dpcertificate,
+  et,
+  weather,
+  zeesh,
+  defake,
 } from "../assets";
 
 export const navLinks = [
@@ -42,47 +48,37 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Frontend Developer",
     icon: web,
   },
-  {
-    title: "React Native Developer",
-    icon: mobile,
-  },
+  
   {
     title: "Backend Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Blockchain Developer",
+    icon: mobile,
+  },
+  {
+    title: "Software Developer",
     icon: creator,
   },
 ];
 
 const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
+ 
   {
     name: "JavaScript",
     icon: javascript,
   },
   {
-    name: "TypeScript",
+    name: "typescript",
     icon: typescript,
   },
   {
     name: "React JS",
     icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
   },
   {
     name: "Tailwind CSS",
@@ -104,152 +100,104 @@ const technologies = [
     name: "git",
     icon: git,
   },
+  
+  {
+    name: "docker",
+    icon: docker,
+  },
   {
     name: "figma",
     icon: figma,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "solidity",
+    icon: solidity,
+  },
+  {
+   name: "metamask",
+   icon: metamask,
+  },
+  {
+    name: "ethereum",
+    icon: ethereum,
   },
 ];
 
 const experiences = [
   {
     title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    company_name: "SkillOp",
+    icon: skillop,  // Replaced starbucks with skillop
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "December 2023 - February 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Worked as a Frontend Developer with React.js in the college society, SkillOp, contributing to the development and maintenance of the website.",
+      "Focused on making the website fully responsive, ensuring an optimal experience across all devices.",
+      "Updated the website’s CSS to enhance visual appeal and improve user experience.",
+      "Collaborated with the team to implement new features and create dynamic, reusable React components for improved site performance and maintainability.",
     ],
-  },
+  }
+  ,
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Junior Backend Developer",
+    company_name: "Delhi Police",
+    icon: dp,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "March 2024 - August 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Authentication Implementation: Developed and maintained secure user authentication mechanisms, ensuring the safe management of sensitive data and smooth user access across various services.",
+      "API Development & Integration: Designed and optimized RESTful APIs for seamless data communication between the backend and frontend, enhancing application functionality and performance.",
+      "Data Security & Compliance: Ensured adherence to industry best practices and legal requirements for data privacy and security, particularly related to government services",
+      "Collaboration & Support: Worked closely with cross-functional teams to support the integration of backend systems, resolving technical issues, and ensuring consistent service delivery.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "Backend Developer",
+    company_name: "Eythor",
+    icon: eythor,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "Nov 2024 - Jan 2025",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Authentication & User Management: Implemented secure authentication protocols to ensure authorized access and protect user data within the Eythor platform.",
+      "API Development & Integration: Designed and maintained efficient APIs to facilitate smooth communication between the backend and various system components, including robot data fetching.",
+      "Data Fetching & Processing: Developed backend systems to collect and process real-time data from robots, ensuring accurate and timely information retrieval.",
+      "Data Visualization: Collaborated with the frontend team to transform raw robot data into visually engaging pie charts, providing users with intuitive and actionable insights.",
     ],
   },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  
 ];
 
-const testimonials = [
+const certificates = [
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    title: "Certified Web Developer",
+    image: sk,
   },
   {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    title: "Delhi Police Internship Certification",
+    image: dpcertificate,
   },
+  // {
+  //   title: "Smart India Hackathon Internal Round Certification",
+  //   image: skillop,
+  // },
   {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
+    title: "Software Developer Internship Offer - Eythor Technologies",
+    image: et,
+  }
 ];
+
 
 const projects = [
   {
-    name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    name: "Weather2.0",
+    description:"Weather2.0 is a sleek and user-friendly weather application built with React. It provides real-time weather updates, including temperature, humidity, wind speed, and a 5-day forecast. Designed with a responsive interface and intuitive navigation, WeatherScope offers accurate, location-based weather data, helping users stay prepared for any conditions.",
     tags: [
       {
         name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "axios",
         color: "green-text-gradient",
       },
       {
@@ -257,9 +205,51 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: weather,
+    source_code_link: "https://github.com/NAME-ASHWANIYADAV/weather2.0",
+  },
+  {
+    name: "Zeesh",
+    description:
+      "Zeesh is a sleek and modern restaurant reservation app crafted with React, designed to simplify dining experiences. With Zeesh, users can effortlessly discover restaurants, browse menus, and secure their reservations in just a few clicks. The app combines intuitive navigation with real-time booking updates, ensuring a seamless and delightful experience for food enthusiasts and restaurant owners alike.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Axios",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: zeesh,
+    source_code_link: "https://github.com/NAME-ASHWANIYADAV/restaurantreservationfrontend",
+  },
+  {
+    name: "Defake.ai",
+    description:
+      "DeFake.ai analyzes videos to identify deepfake manipulations by detecting inconsistencies in both visual and audio patterns. It performs real-time analysis, providing users with a confidence score indicating the likelihood of deepfake content. The tool helps users and organizations verify content authenticity, making it a valuable resource against misinformation.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "solidity",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: defake,
+    source_code_link: "https://github.com/NAME-ASHWANIYADAV/fakifyfrontend",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, certificates, projects };
